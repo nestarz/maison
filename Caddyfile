@@ -1,6 +1,7 @@
 localhost:2000 {
-# chez.eliasrhouzlane.com {
+# public {
     webdav {
+        modify false
         scope ./webdav/
     }
     root ./webdav/
@@ -8,9 +9,19 @@ localhost:2000 {
     cors
 }
 
+localhost:2002 {
+# private {
+    basicauth local host
+    webdav {
+        modify true
+        scope ./webdav/
+    }
+    root ./webdav/
+}
+
 
 localhost:2001 {
-# eliasrhouzlane.com {
+# site {
     root ./webdav/www/
     gzip
     rewrite / {
