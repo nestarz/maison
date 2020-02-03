@@ -1,0 +1,13 @@
+{
+  "imports": {
+    "react": "https://cdn.jsdelivr.net/npm/@esm-bundle/react/esm/react.development.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/@esm-bundle/react-dom/esm/react-dom.development.min.js",
+    "htm": "https://unpkg.com/htm@3.0.2/dist/htm.module.js?module",
+    "htm/react": "https://unpkg.com/htm@3.0.2/react/index.module.js",
+    "sinuous": "https://unpkg.com/sinuous?module",
+    "mongodb-stitch-browser-sdk": "https://cdn.pika.dev/mongodb-stitch-browser-sdk/^4.8.0",
+    "vue": "../src/utils/vue.esm.js",
+    "utils/": "../src/utils/",
+    "components/": "../src/components/"
+  }
+}

@@ -1,0 +1,21 @@
+localhost:2000 {
+# chez.eliasrhouzlane.com {
+    webdav {
+        scope ./webdav/
+    }
+    root ./webdav/
+    log ./logs/access.log
+    cors
+}
+
+
+localhost:2001 {
+# eliasrhouzlane.com {
+    root ./webdav/www/
+    gzip
+    rewrite / {
+        regexp .*
+        ext !html,!css,!js
+        to /
+    }
+}

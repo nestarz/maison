@@ -1,0 +1,31 @@
+Arguments: 
+  /usr/local/Cellar/node/12.12.0/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js add chrome-aws-lambda puppeteer-core
+
+PATH: 
+  /Users/eliasrhouzlane/.poetry/bin:/Users/eliasrhouzlane/.vulkan_sdk/macOS/bin:/Users/eliasrhouzlane/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/eliasrhouzlane/go/bin:/Users/eliasrhouzlane/.poetry/bin:/Users/eliasrhouzlane/.nodenv/shims:/Users/eliasrhouzlane/.pyenv/shims:/Users/eliasrhouzlane/.cargo/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.12.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EPERM: operation not permitted, mkdir '/Volumes/vps770320.ovh.net/tools/serverless-pdf/node_modules/mime/.github'
+
+npm manifest: 
+  {
+    "name": "serverless-pdf",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
