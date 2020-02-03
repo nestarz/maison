@@ -1,4 +1,4 @@
-./logs
+logs/access.log
 *node_modules/**
 
 *.pyo

@@ -17,7 +17,6 @@ export const Preview = files =>
     <div class="container">
       ${files
         .map(file => {
-          console.log(file);
           if (file.getcontenttype.includes("image/")) {
             return html`
               <div tabindex="0" class="image-container">
@@ -63,6 +62,7 @@ export const Folders = folders =>
 
 export const Files = files =>
   files
+    .filter(file => !file.displayname.startsWith('.'))
     .map(
       file =>
         html`
