@@ -1,5 +1,5 @@
 logs/access.log
-*node_modules/**
+node_modules
 
 *.pyo
 *.pyc

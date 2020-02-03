@@ -1,16 +1,15 @@
 import { ref } from "vue";
 import html from "utils/html.js";
 
-const isValidURL = string => {
-  try {
-    new URL(string);
-    return true;
-  } catch (_) {
-    return false;
-  }
-};
+function isValidURL(str) {
+  var a = document.createElement("a");
+  a.href = str;
+  return a.host && a.host != window.location.host;
+}
 
 async function Database() {
+  window.global = global; // fix
+  const stitch = await import("mongodb-stitch-browser-sdk");
   const client = stitch.Stitch.initializeDefaultAppClient("library-01-mxjco");
 
   const db = client
@@ -27,12 +26,12 @@ async function Database() {
         .collection("futurs")
         .find({}, { limit: 100 })
         .asArray(),
-    add: data =>
+    add: url =>
       db
         .collection("futurs")
         .updateOne(
-          { url: data.url },
-          { $set: { owner_id: client.auth.user.id, ...data } },
+          { url },
+          { $set: { owner_id: client.auth.user.id, url } },
           { upsert: true }
         )
   };
@@ -54,13 +53,8 @@ export default {
       list,
       input,
       add: async () => {
-        const url = isValidURL(input.value) ? input.value : false;
-
-        if (url) {
-          const request = await fetch("https://metadata.nestarz.now.sh/" + url);
-          const metadata = await request.json();
-          console.log(metadata);
-          await db.add({ metadata, url });
+        if (isValidURL(input.value)) {
+          await db.add(input.value);
           list.value = await db.get();
         } else {
           console.error("Invalid URL", input.value);

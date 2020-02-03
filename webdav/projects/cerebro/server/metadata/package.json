@@ -1,0 +1,12 @@
+{
+  "name": "metadata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "domino": "^2.1.4",
+    "node-fetch": "^2.6.0",
+    "page-metadata-parser": "^1.1.4"
+  }
+}
