@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "worker-timer": "../src/utils/worker-timer.js",
+    "components/": "../src/components/",
+    "render-markdown": "https://chez.eliasrhouzlane.com/www/src/components/render-markdown.js",
+    "utils/": "../utils/"
+  }
+}

@@ -14,7 +14,7 @@ export const PreviewHTML = url =>
 
 export const Preview = files =>
   html`
-    <div class="container">
+    <div class="container files-${files.length}">
       ${files
         .map(file => {
           if (file.getcontenttype.includes("image/")) {
@@ -23,7 +23,10 @@ export const Preview = files =>
                 <img src="${file.href}" />
               </div>
             `;
-          } else if (file.getcontenttype.includes("text/markdown")) {
+          } else if (
+            file.getcontenttype.includes("text/markdown") ||
+            file.getcontenttype.includes("text/plain")
+          ) {
             return html`
               <div tabindex="0" class="text-container">
                 <render-markdown src="${file.href}"></render-markdown>
@@ -62,7 +65,7 @@ export const Folders = folders =>
 
 export const Files = files =>
   files
-    .filter(file => !file.displayname.startsWith('.'))
+    .filter(file => !file.displayname.startsWith("."))
     .map(
       file =>
         html`

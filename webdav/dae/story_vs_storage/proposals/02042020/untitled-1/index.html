@@ -1,0 +1,80 @@
+<body>
+  <main>
+    <audio-track></audio-track>
+    <audio-track></audio-track>
+    <audio-track></audio-track>
+    <audio-track></audio-track>
+  </main>
+  <aside>
+    <div class="controls">
+      <button id="record">Record</button>
+      <audio controls></audio>
+    </div>
+    <render-markdown src="../research/notes.md"></render-markdown>
+  </aside>
+</body>
+
+<script defer src="./web_modules/es-module-shims.js"></script>
+<script type="importmap-shim" src="./web_modules/import-map.json"></script>
+<script type="importmap-shim" src="./src/import-map.json"></script>
+<script type="module-shim" src="./src/index.js"></script>
+
+<style>
+  body,
+  html {
+    margin: 0;
+    height: 100%;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  nav {
+    position: fixed;
+    padding: 1rem;
+  }
+
+  a {
+    color: white;
+  }
+
+  main {
+    height: 100%;
+    display: grid;
+    grid-auto-rows: 1fr;
+  }
+
+  audio-track {
+    width: 100%;
+    background-color: black;
+    display: block;
+  }
+
+  .recording {
+    background-color: blue;
+  }
+
+  aside {
+    display: grid;
+    grid-auto-rows: min-content;
+    padding-right: 1rem;
+  }
+
+  .controls {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+  }
+
+  render-markdown {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+  }
+</style>

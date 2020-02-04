@@ -1,4 +1,4 @@
-import markdown from "micro-down";
+import markdown from "./micro-down.js";
 
 const trigger = {
   src: (host, _, newValue) =>
