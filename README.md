@@ -30,6 +30,5 @@ rclone config
 Remove dry-run if you accept the changes
 
 ```bash
-rclone sync /Users/eliasrhouzlane/eliasrhouzlane.com/webdav/ chez-eliasrhouzlane-com: -P --exclude-from
- /Users/eliasrhouzlane/eliasrhouzlane.com/.rcloneignore --dry-run
+rclone sync /Users/eliasrhouzlane/eliasrhouzlane.com/webdav/ chez-eliasrhouzlane-com: -P --exclude-from /Users/eliasrhouzlane/eliasrhouzlane.com/.rcloneignore --dry-run
 ```

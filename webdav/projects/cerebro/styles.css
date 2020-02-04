@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Open Sans",
+    "Helvetica Neue", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+#app {
+  display: block;
+}
+nav {
+  margin-bottom: 5rem;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+}
+.line {
+  width: 2px;
+  left: 50%;
+  -moz-transition: ease-in-out 0.2s all;
+  -o-transition: ease-in-out 0.2s all;
+  -webkit-transition: ease-in-out 0.2s all;
+  transition: ease-in-out 0.2s all;
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background: #0f0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  mix-blend-mode: screen;
+}
+a {
+  color: #0f0;
+  text-decoration-style: dotted;
+}
+main {
+  margin: auto;
+  padding: 1rem;
+  max-width: 80rem;
+}
+h1 {
+  margin-bottom: 0;
+}
+nav {
+  margin
+}
+input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #0f0;
+}
+h1,
+h2,
+p {
+  display: grid;
+  grid-gap: 0 2rem;
+  text-align: center;
+}
+.notok {
+  color: red;
+}
+.ok {
+  color: #0f0;
+}
+@media (orientation: landscape) {
+  html {
+    font-size: 15px;
+  }
+  h1,
+  h2,
+  p {
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+  h2 {
+    margin: 2rem;
+  }
+  h1 > *:first-child,
+  h2 > *:first-child,
+  p > *:first-child {
+    text-align: right;
+  }
+  header {
+    height: 70vh;
+    font-size: 3rem;
+  }
+}
+.button {
+  padding: 1rem;
+  background: #0f0;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.add {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.futur-item {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  overflow-wrap: break-word;
+  background: white;
+}
+.futur-item td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.2em 0.5em;
+}
+th,
+td {
+  border: 1px solid rgb(232, 232, 232);
+}
