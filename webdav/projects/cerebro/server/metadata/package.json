@@ -5,7 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/fetch": "^5.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "domino": "^2.1.4",
     "node-fetch": "^2.6.0",
     "page-metadata-parser": "^1.1.4"
